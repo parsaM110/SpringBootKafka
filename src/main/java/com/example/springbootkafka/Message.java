@@ -1,4 +1,4 @@
-package com.example.springbootkafka.config;
+package com.example.springbootkafka;
 
 import java.time.LocalDateTime;
 
