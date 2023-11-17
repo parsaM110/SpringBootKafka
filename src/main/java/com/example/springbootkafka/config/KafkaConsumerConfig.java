@@ -11,6 +11,8 @@ import org.springframework.kafka.config.KafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
+import org.springframework.kafka.support.converter.JsonMessageConverter;
+import org.springframework.kafka.support.converter.RecordMessageConverter;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
 
@@ -49,6 +51,11 @@ public class KafkaConsumerConfig {
         factory.setConsumerFactory(consumerFactory);
         return factory;
 
+    }
+
+    @Bean
+    public RecordMessageConverter converter() {
+        return new JsonMessageConverter();
     }
 
 }

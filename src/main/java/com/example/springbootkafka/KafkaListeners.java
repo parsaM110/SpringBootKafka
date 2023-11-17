@@ -10,7 +10,7 @@ public class KafkaListeners {
             topics = "amigoscode",
             groupId = "group_id"
     )
-    void listener(String data){
+    void listener(Message data){
         // yellow system.out.println : received data from kafka
         System.out.println("\u001B[33m" + "Received data from Kafka:" + data +  " 🎉" + "\u001B[0m");
 
