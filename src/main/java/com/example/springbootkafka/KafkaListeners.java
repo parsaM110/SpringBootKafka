@@ -12,7 +12,7 @@ public class KafkaListeners {
     )
     void listener(Message data){
         // yellow system.out.println : received data from kafka
-        System.out.println("\u001B[33m" + "Received data from Kafka:" + data +  " 🎉" + "\u001B[0m");
+        System.out.println("\u001B[33m" + "Received data from Kafka:" + data.message().toUpperCase() +  " 🎉" + "\u001B[0m");
 
     }
 }
